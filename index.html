@@ -738,6 +738,14 @@ em,.mt em,.stats b,.stt b,.pdh h1 .cc{color:var(--cl)}
 @media(max-width:1000px){.stg{padding-top:20px}}
 /* carousel dots: taller hit area */
 .mcdt{height:24px}.mcdt:after{top:10px}
+</style><style id="herofit">
+/* Home hero: scale with the screen height so the buttons stay above the fold on laptops */
+@media(min-width:901px){
+.top.mk .yc .hli{width:min(350px,29vh)!important;height:auto}
+.top.mk .yc{margin:clamp(8px,2.4vh,18px) 0 clamp(12px,3vh,34px) 4px}
+.top.mk .hr:has(.yc) .sub{margin-top:clamp(20px,4vh,40px)}
+.top.mk .hr:has(.yc) .ht{padding-bottom:clamp(70px,10vh,120px)}
+}
 </style></head><body><div id="app"></div><script>
 var IMG={};
 (function(){
