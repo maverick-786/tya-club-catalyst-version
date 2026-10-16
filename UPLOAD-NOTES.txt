@@ -1,0 +1,8 @@
+TYA Club website - Hostinger upload
+===================================
+1. hPanel > Websites > Manage > File Manager > public_html
+2. Upload index.html and the whole images/ folder (or upload this ZIP and Extract it inside public_html).
+3. Open https://yourdomain/ - the site is a single page; sections open via #links (e.g. /#how-it-works, /#contact).
+4. To replace any photo later: upload a new JPG to images/ with the SAME filename (e.g. images/home-hero.jpg).
+5. All forms open the visitor's email app addressed to hello@thetyaclub.com (no server needed).
+Notes: Privacy and Terms pages are drafts - have them reviewed before launch.
