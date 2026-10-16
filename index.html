@@ -489,7 +489,7 @@ h1.hl+.tbu,h1.hl+.pdu,h1.hl+.pgu,h1.hl+.hwu{display:block}
 .top.mk .hd{position:relative;z-index:6}.top.mk .hr:has(.yc) .ht{position:relative;z-index:4}.top.mk .hr:has(.yc) .lede{max-width:24em}
 .top.mk .hr:has(.yc) .coll .n1{right:5%;top:10%}
 .top.mk .hr:has(.yc) .coll .n2{right:4%;bottom:9%;width:32%}
-}@media(min-width:901px) and (max-width:1279px){.top.mk .hr:has(.yc) .coll{width:52%;top:56px;bottom:20px}.top.mk .hr:has(.yc) .coll .n1{top:6%}}
+}@media(min-width:901px) and (max-width:1279px){.top.mk .hr:has(.yc) .coll{width:52%;top:56px;bottom:20px}.top.mk .hr:has(.yc) .coll .n1{top:15%}}
 </style><style id="pcf">@media(min-width:601px){
 .pc>img{border-radius:0;height:228px;margin:-4px -4px 0;width:calc(100% + 8px);-webkit-mask:url(assets/mask-card-1.webp) 0 0/100% 100% no-repeat;mask:url(assets/mask-card-1.webp) 0 0/100% 100% no-repeat}
 .pc:nth-child(even)>img{-webkit-mask-image:url(assets/mask-card-2.webp);mask-image:url(assets/mask-card-2.webp)}
@@ -500,6 +500,21 @@ h1.hl+.tbu,h1.hl+.pdu,h1.hl+.pgu,h1.hl+.hwu{display:block}
 @media(min-width:601px){.yc.hl{margin:18px 0 34px;transform:none}.yc.hl .hli{width:min(100%,var(--w,350px))}.yc.hl span{display:inline}}
 @media(max-width:600px){.yc.hl{margin:30px 0 40px;transform:rotate(-7deg);text-transform:uppercase}}
 .pdcp h2.hl .hli{margin:0 0 6px}
+</style><style id="crowd">.crowd{display:none}
+@media(min-width:901px){
+.top.mk .hr:has(.yc) .coll .cs.ph1,.top.mk .hr:has(.yc) .coll .bl{display:none}
+.top.mk .hr:has(.yc) .coll{width:60%;top:-12px;bottom:14px;right:calc(50% - 50vw - 2%)}
+.crowd{display:block;position:absolute;inset:0;z-index:1;pointer-events:none}
+.crowd .crb{position:absolute;max-width:none}
+.crowd .crb-y{left:-4%;top:2%;width:112%;height:96%;object-fit:fill}
+.crowd .crb-o{left:36%;top:17%;width:40%;height:30%;object-fit:fill;transform:rotate(-8deg)}
+.crowd .pp{position:absolute;height:auto;max-width:none;filter:drop-shadow(0 10px 18px rgba(26,29,28,.18))}
+.crowd .pp1{left:22%;bottom:-3%;width:44%;z-index:1}
+.crowd .pp2{left:50%;bottom:6%;width:34%;z-index:2}
+.crowd .pp3{left:64%;bottom:10%;width:36%;z-index:2}
+.crowd .pp4{left:-2%;bottom:-2%;width:48%;z-index:3;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%);mask-image:linear-gradient(90deg,transparent 0,#000 16%)}
+}
+@media(min-width:901px) and (max-width:1279px){.top.mk .hr:has(.yc) .coll{width:56%}}
 </style></head><body><div id="app"></div><script>
 var IMG={};
 (function(){
@@ -629,7 +644,7 @@ var SUN='<img class="sun" src="assets/sun-yellow.webp" alt="" aria-hidden="true"
 function home(){
 var pcs=[['Creative Lab','Turn your ideas into real projects with the right tools and people.','book','y'],['Future Ready','Build skills for college, careers and life beyond school.','chart','r'],['Community Impact','Work on real challenges and make a difference locally.','sprout','y'],['Arts & Media','Express. Create. Amplify your voice.','palette','y']];
 return shell('top','mk',`<div class="w hr"><div class="ht"><h1 class="yc hl">${HL('yac','<span class="a">The</span><span class="b">Young Adults<svg class="crn" viewBox="0 0 50 40" aria-hidden="true"><path d="M4 32L8 8l11 12 6-16 6 16 11-12 4 24z" fill="none" stroke="#FFC72C" stroke-width="3.500" stroke-linejoin="round"/></svg></span><span class="c">Club</span>',350)}</h1><img class="uline" src="assets/underline-yellow.webp" alt="" aria-hidden="true"><p class="sub">After-school club for bigger tomorrows.</p><p class="lede">A supportive space for young adults to learn, create, collaborate and become who they're meant to be.</p><p>${btn('Join the Club →','contact','k')}${btn(ic('play')+' Watch Our Story','our-story','o')}</p><div class="av"><span class="fc">${[0,1,2,3,4].map(i=>`<img src="${IMG['av'+i]}" alt="">`).join('')}</span><span><b>1,000+</b> young people<br>already growing with us.</span></div></div>
-<div class="coll"><span class="bl b1"></span><span class="bl b2"></span><img class="cs ph1" src="${IMG.heroPhoto}" alt="Four smiling friends taking a selfie at golden hour"><p class="n1">People<br>Ideas<br>Skills<br>Opportunity<br>Real Change</p>${SUN.replace('class="sun"','class="sun" style="right:14%;top:20%"')}<div class="n2">${ic('star')} Same after school. Different possibilities.</div></div></div>`)+
+<div class="coll"><span class="bl b1"></span><span class="bl b2"></span><div class="crowd" role="img" aria-label="Four smiling young adults"><img class="crb crb-y" src="assets/blob-yellow-1.webp" alt="" aria-hidden="true"><img class="crb crb-o" src="assets/blob-orange-1.webp" alt="" aria-hidden="true"><img class="pp pp1" src="assets/hp-boy-grey.webp" alt="" loading="eager"><img class="pp pp2" src="assets/hp-girl-white.webp" alt="" loading="eager"><img class="pp pp3" src="assets/hp-boy-beanie.webp" alt="" loading="eager"><img class="pp pp4" src="assets/hp-girl-yellow.webp" alt="" loading="eager"></div><img class="cs ph1" src="${IMG.heroPhoto}" alt="Four smiling friends taking a selfie at golden hour"><p class="n1">People<br>Ideas<br>Skills<br>Opportunity<br>Real Change</p>${SUN.replace('class="sun"','class="sun" style="right:14%;top:20%"')}<div class="n2">${ic('star')} Same after school. Different possibilities.</div></div></div>`)+
 `<div class="bd"><ul><li>${icw('people')}<span>Make<br>Friends</span></li><li>${icw('bulb')}<span>Build<br>Skills</span></li><li>${icw('rocket')}<span>Explore<br>Opportunities</span></li><li>${icw('sprout')}<span>Create<br>Change</span></li><li class="nt">Good People<br>Brighter<br>Futures.</li></ul></div>`+
 `<section class="s pg2" id="programs"><img class="swk swk1" src="assets/swoosh-yellow-1.webp" alt="" aria-hidden="true"><div class="w"><div class="ph2"><div><p class="lab">OUR PROGRAMS</p><h2 class="mt">More than<br>an <em>after-school club.</em></h2><p class="sm">Hands-on experiences, real-world skills and a community that shows up for you.</p></div><div class="nt2"><p>Explore.<br>Learn.<br>Create.<br>Belong.</p><svg viewBox="0 0 110 40" aria-hidden="true"><path d="M3 28c20 10 30-20 50-8s20 8 40-6M84 6l14 10-16 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div>${btn('View All Programs →','how-it-works','o')}</div><div class="pcs">${pcs.map((p,i)=>`<a class="pc ${p[3]}" href="#curriculum"><img src="${IMG['pc'+i]}" alt="${p[0]}"><div class="pn"><span class="pi">${ic(p[2])}</span><h3>${p[0]}</h3><p>${p[1]}</p><span class="ar">→</span></div></a>`).join('')}</div></div></section>`+
 `<section class="s" style="padding:30px 0 10px;overflow:hidden"><div class="w im"><div class="rp"><img src="${IMG.mkReal}" alt="Smiling young woman with headphones"><p>Real<br>People.<br>Real<br>Progress.</p><svg viewBox="0 0 60 30" aria-hidden="true"><path d="M3 24Q22 4 54 12M44 4l12 8-14 7"/></svg></div><div class="stt"><p class="lab">OUR IMPACT</p><div class="g3"><div><b>1,000+</b><div>Young people<br>in our community</div></div><div><b>85%</b><div>Feel more confident<br>about their future</div></div><div><b>120+</b><div>Projects created<br>by club members</div></div></div></div><div class="qb"><img class="qo" src="assets/quote-open.webp" alt="" aria-hidden="true">A safe space to be myself, and a place to grow.<img class="qc" src="assets/quote-close.webp" alt="" aria-hidden="true"><span class="qa"><img class="qph" src="${IMG.t1}" alt="">– TYA Member</span>${ic('crown','crn2')}</div></div></section>`+
