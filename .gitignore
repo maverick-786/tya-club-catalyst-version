@@ -1,3 +1,6 @@
 seg_debug.txt
 *.bak
 .DS_Store
+bak_before_*.html
+preview_*.html
+seg_debug.txt
