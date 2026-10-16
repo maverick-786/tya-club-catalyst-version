@@ -602,6 +602,13 @@ em,.mt em,.stats b,.stt b,.pdh h1 .cc{color:var(--cl)}
 .rm summary,.rm[open] summary:before,.lgt a{color:var(--ct)}
 .fdc .tag.hand[style*="var(--c)"]{color:#1A1D1C!important}
 .cta.r h2{color:#1A1D1C!important}
+</style><style id="fbar1">
+.fbar{display:none}
+@media(max-width:700px){
+.fbar{display:block;position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translate(-50%,26px);opacity:0;visibility:hidden;background:var(--y);color:#1A1D1C;font:700 16px 'DM Sans',sans-serif;padding:13px 26px;border-radius:40px;border:2px solid #1A1D1C;box-shadow:3px 4px 0 #1A1D1C;z-index:50;text-decoration:none;white-space:nowrap}
+.fbar.on{opacity:1;visibility:visible;transform:translate(-50%,0)}
+}
+@media(max-width:700px) and (prefers-reduced-motion:no-preference){.fbar{transition:transform .25s ease,opacity .25s ease,visibility .25s}}
 </style></head><body><div id="app"></div><script>
 var IMG={};
 (function(){
@@ -829,5 +836,8 @@ function a11y(page){if(page=='how-it-works')document.querySelectorAll('.hp h3').
 function r(){var h=location.hash.slice(1)||'top',page=P[h]?h:(AL[h]||'top');var cur=$('app').dataset.p;if(cur!=page){$('app').innerHTML='<a class="skip" href="#top">Skip to main content</a><main id="main">'+lz(P[page]())+'</main>'+lz(foot);$('app').dataset.p=page;document.title=TT[page]||TT.top;wire();a11y(page);if(page==='top'){try{if(!sessionStorage.getItem('tyaIntro')){sessionStorage.setItem('tyaIntro','1');var cw=document.querySelector('.coll');if(cw)cw.classList.add('intro')}}catch(e){}}}
 var t=(P[h]||h=='top')?null:$(h);if(t)t.scrollIntoView();else scrollTo(0,0)}
 addEventListener('hashchange',r);r();
+(function(){var b=document.createElement('a');b.className='fbar';b.href='#centre-results';b.textContent='Find your Pod \u2192';document.body.appendChild(b);var skip={'centre-results':1,contact:1,privacy:1,terms:1};
+function upd(){var pg=$('app').dataset.p,f=document.querySelector('footer'),on=!skip[pg]&&scrollY>520&&!(f&&f.getBoundingClientRect().top<innerHeight-40);b.classList.toggle('on',on);b.tabIndex=on?0:-1}
+addEventListener('scroll',upd,{passive:true});addEventListener('hashchange',function(){setTimeout(upd,80)});addEventListener('resize',upd);upd()})();
 
 </script></body></html>
